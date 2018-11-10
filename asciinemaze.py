@@ -43,6 +43,8 @@ def main(argv):
                 if (c == '\n'):
                     # Rem.: Endl is used by the file format this way!!!
                     sys.stdout.write('\\r\\n')
+                elif (c == '"'):
+                    sys.stdout.write('\\"')
                 else:
                     sys.stdout.write(str(c))
                 print('"]')
