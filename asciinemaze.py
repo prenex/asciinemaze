@@ -27,11 +27,11 @@ def main(argv):
             # And add one line for each character
             for c in line:
                 sys.stdout.write('[')
-                if ((c == '\t') or (c == ' ')):
+                if ((c == '\t') or (c == ' ') or (c == '\n')):
                     # When char is tab or space it might be a source code!
                     # That means we must skip tabulation spaces and also
                     # we should wait a bit after end of words (thinking time)
-                    if ((prev == '\t') or (prev == ' ')):
+                    if ((prev == '\t') or (prev == ' ')): # \n missing here for a cause!
                         t = t + tabtime # fast tabulation!
                     else:
                         t = t + random.uniform(lospeed*thinkscaler, hispeed*thinkscaler) # thinking time
