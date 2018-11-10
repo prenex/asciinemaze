@@ -3,8 +3,8 @@
 import sys, random, shutil
 
 lospeed = 0.03
-hispeed = 0.4
-thinkscaler = 5
+hispeed = 0.3
+thinkscaler = 3
 tabtime = 0.0001
 
 def main(argv):
