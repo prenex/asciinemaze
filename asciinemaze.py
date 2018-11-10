@@ -45,6 +45,8 @@ def main(argv):
                     sys.stdout.write('\\r\\n')
                 elif (c == '"'):
                     sys.stdout.write('\\"')
+                elif (c == '\\'):
+                    sys.stdout.write('\\\\')
                 else:
                     sys.stdout.write(str(c))
                 print('"]')
