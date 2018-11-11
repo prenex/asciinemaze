@@ -10,6 +10,7 @@ tabtime = 0.0001
 def main(argv):
     if (len(argv) < 1):
         print("Input file is missing!")
+        exit(1)
     else:
         # Create header line
         # Use the width and height as the terminal is now!
@@ -40,7 +41,9 @@ def main(argv):
 
                 sys.stdout.write(str(t))
                 sys.stdout.write(', "o", "')
-                if (c == '\n'):
+                if (c == '\t'):
+                    sys.stdout.write('\\t')
+                elif (c == '\n'):
                     # Rem.: Endl is used by the file format this way!!!
                     sys.stdout.write('\\r\\n')
                 elif (c == '"'):
